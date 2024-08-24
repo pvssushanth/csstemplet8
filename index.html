@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <style>
+    body{
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        align-content: center;
+        align-items: center;
+    }
+ div{
+    border: 2px solid;
+    position: relative;
+    background-color: darkgrey;
+    height: 200px;
+    
+ }
+ 
+img{
+    transition: transform 4s ease;
+    position: relative;
+    left: 80px;
+    height: 100px;
+    width: 100px;
+    top: 30px;
+}
+.trans:hover ~ img {
+    transform: translate(20px);
+}
+.rotate:hover ~ img{
+    transform: rotate(360deg);
+}
+.scale:hover ~ img{
+    transform: scale(1.5);
+}
+.skew:hover~img{
+    transform: skew(45deg);
+}
+
+button{
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    background-color: aqua;
+    cursor: pointer;
+    border-radius: 2px;
+}
+button:hover{
+     background-color: red;
+}
+div>button>a{
+    text-decoration: none;
+    color: green;
+}
+</style>
+<body>
+<div>
+<button class="trans"><a href="#">translate</a></button>
+<button class="rotate"><a href="#">rotate</a></button>
+<button class="scale"><a href="#">scale</a></button>
+<button class="skew"><a href="#">skew</a></button><br>
+<img src="./lion.jpeg" alt="">
+</div>
+</body>
+</html>
